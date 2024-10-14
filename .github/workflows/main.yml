@@ -1,0 +1,16 @@
+name: Extract ZIP File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  extract-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Extract ZIP file
+        run: unzip https://github.com/Apinkgo/bataxi/blob/main/sb1-hxcbap.zip -d https://github.com/Apinkgo/bataxi/blob/main/
